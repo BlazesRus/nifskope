@@ -1113,7 +1113,7 @@ HTML_STYLESHEET        =
 # see the documentation.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_EXTRA_STYLESHEET  = "@PWD@/build/doxygen/extra.css"
+HTML_EXTRA_STYLESHEET  = "@PWD@/build_files/doxygen/extra.css"
 
 # The HTML_EXTRA_FILES tag can be used to specify one or more extra images or
 # other source files which should be copied to the HTML output directory. Note
@@ -2027,13 +2027,13 @@ SKIP_FUNCTION_MACROS   = YES
 # the path). If a tag file is not located in the directory in which doxygen is
 # run, you must also specify the path to the tagfile here.
 
-TAGFILES               = "@PWD@/build/doxygen/tags/qtconcurrent.tags=http://qt-project.org/doc/qt-5/" \
-                         "@PWD@/build/doxygen/tags/qtcore.tags=http://qt-project.org/doc/qt-5/" \
-                         "@PWD@/build/doxygen/tags/qtgui.tags=http://qt-project.org/doc/qt-5/" \
-                         "@PWD@/build/doxygen/tags/qtopengl.tags=http://qt-project.org/doc/qt-5/" \
-                         "@PWD@/build/doxygen/tags/qtnetwork.tags=http://qt-project.org/doc/qt-5/" \
-                         "@PWD@/build/doxygen/tags/qtwidgets.tags=http://qt-project.org/doc/qt-5/" \
-                         "@PWD@/build/doxygen/tags/qtxml.tags=http://qt-project.org/doc/qt-5/"
+TAGFILES               = "@PWD@/build_files/doxygen/tags/qtconcurrent.tags=http://qt-project.org/doc/qt-5/" \
+                         "@PWD@/build_files/doxygen/tags/qtcore.tags=http://qt-project.org/doc/qt-5/" \
+                         "@PWD@/build_files/doxygen/tags/qtgui.tags=http://qt-project.org/doc/qt-5/" \
+                         "@PWD@/build_files/doxygen/tags/qtopengl.tags=http://qt-project.org/doc/qt-5/" \
+                         "@PWD@/build_files/doxygen/tags/qtnetwork.tags=http://qt-project.org/doc/qt-5/" \
+                         "@PWD@/build_files/doxygen/tags/qtwidgets.tags=http://qt-project.org/doc/qt-5/" \
+                         "@PWD@/build_files/doxygen/tags/qtxml.tags=http://qt-project.org/doc/qt-5/"
 
 # When a file name is specified after GENERATE_TAGFILE, doxygen will create a
 # tag file that is based on the input files it reads. See section "Linking to

@@ -462,9 +462,9 @@ build_pass|!debug_and_release {
 	SED = $$getSed()
 
 	!isEmpty(SED) {
-		# Replace @VERSION@ with number from build/VERSION
-		# Copy build/README.md.in > README.md
-		QMAKE_PRE_LINK += $${SED} -e s/@VERSION@/$${VER}/ $${PWD}/build/README.md.in > $${PWD}/README.md $$nt
+		# Replace @VERSION@ with number from build_files/VERSION
+		# Copy build_files/README.md.in > README.md
+		QMAKE_PRE_LINK += $${SED} -e s/@VERSION@/$${VER}/ $${PWD}/build_files/README.md.in > $${PWD}/README.md $$nt
 	}
 
 
@@ -479,8 +479,8 @@ win32:contains(QT_ARCH, i386) {
 }
 
 	XML += \
-		build/docsys/nifxml/nif.xml \
-		build/docsys/kfmxml/kfm.xml
+		build_files/docsys/nifxml/nif.xml \
+		build_files/docsys/kfmxml/kfm.xml
 
 	QSS += \
 		res/style.qss

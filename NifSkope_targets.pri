@@ -54,16 +54,16 @@ exists($$QMAKE_LRELEASE) {
 docs.target = docs
 
 # Vars
-docsys = $$syspath($${PWD}/build_files/docsys)
+docsys = $$syspath($${PWD}/build/docsys)
 indoc = doc$${QMAKE_DIR_SEP}
 outdoc = $$syspath($${DESTDIR}/doc)
 
 # COMMANDS
 
 docs.commands += $$sprintf($$QMAKE_MKDIR_CMD, $${outdoc}) $$nt
-docs.commands += cd $${docsys} # cd ./build_files/docsys
+docs.commands += cd $${docsys} # cd ./build/docsys
 docs.commands += && python nifxml_doc.py # invoke python
-# Move *.html files out of ./build_files/docsys/doc
+# Move *.html files out of ./build/docsys/doc
 win32:docs.commands += && move /Y $${indoc}*.html $${outdoc}
 else:docs.commands += && mv -f $${indoc}*.html $${outdoc}
 # Copy CSS and ICO
@@ -100,7 +100,7 @@ doxygen.target = doxygen
 
 # Vars
 doxyfile = $$syspath($${OUT_PWD}/Doxyfile)
-doxyfilein = $$syspath($${PWD}/build_files/doxygen/Doxyfile.in)
+doxyfilein = $$syspath($${PWD}/build/doxygen/Doxyfile.in)
 
 # Paths
 qhgen = $$[QT_INSTALL_BINS]/qhelpgenerator$${EXE}
@@ -124,7 +124,7 @@ exists($$dot) {
 	DOT_PATH = $$re_escape($${dot})
 }
 
-TAGS = $${PWD}/build_files/doxygen/tags
+TAGS = $${PWD}/build/doxygen/tags
 BINS = $$re_escape($$[QT_INSTALL_BINS])
 
 # Find `sed` command

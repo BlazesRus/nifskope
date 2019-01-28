@@ -87,7 +87,7 @@ defineReplace(getVersion) {
 	# includes. (VERSION needed to come before, REVISION after)
 	!isEmpty(_VERSION):return($$_VERSION)
 
-	_VERSION = $$cat(build_files/VERSION)
+	_VERSION = $$cat(build/VERSION)
 	export(_VERSION)
 	return($$_VERSION)
 }

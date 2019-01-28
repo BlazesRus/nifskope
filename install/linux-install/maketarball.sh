@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Script for preparing the ~/rpmbuild_files/SOURCES/nifskope-$VERSION.tar.bz2 tarball
+# Script for preparing the ~/rpmbuild/SOURCES/nifskope-$VERSION.tar.bz2 tarball
 
 # How to build the rpm:
 
@@ -9,7 +9,7 @@
 # ./maketarball.sh
 # rpmbuild -ba nifskope.spec
 
-# and the rpm will reside in ~/rpmbuild_files/RPMS
+# and the rpm will reside in ~/rpmbuild/RPMS
 
 VERSION=`cat ../VERSION`
 
@@ -112,7 +112,7 @@ FILES="NifSkope.pro \
 
 # clean old tarball
 rm -rf nifskope-$VERSION
-rm -f ~/rpmbuild_files/SOURCES/nifskope-$VERSION.tar.bz2
+rm -f ~/rpmbuild/SOURCES/nifskope-$VERSION.tar.bz2
 
 # create fresh source directory
 mkdir nifskope-$VERSION
@@ -150,7 +150,7 @@ cd linux-install
 cp nifskope.desktop nifskope-$VERSION
 
 # create tarball
-tar cfvj ~/rpmbuild_files/SOURCES/nifskope-$VERSION.tar.bz2 nifskope-$VERSION
+tar cfvj ~/rpmbuild/SOURCES/nifskope-$VERSION.tar.bz2 nifskope-$VERSION
 
 # clean
 rm -rf nifskope-$VERSION
